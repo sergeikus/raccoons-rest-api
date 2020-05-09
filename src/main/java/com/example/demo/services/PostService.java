@@ -10,7 +10,7 @@ import java.util.*;
 @Service
 public class PostService {
 
-    public final HashMap<String, Integer> availableCategories = new HashMap<>() {
+    public final HashMap<String, Integer> availableCategories = new HashMap<String, Integer>() {
         {
             put("software", 0);
             put("electronics", 0);
