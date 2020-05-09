@@ -1,5 +1,7 @@
 package com.example.demo.rest;
 
+import com.example.demo.error.EmptyCategoryException;
+import com.example.demo.error.UnknownCategory;
 import com.example.demo.model.Post;
 import com.example.demo.services.PostService;
 import com.example.demo.util.TestData;
@@ -23,13 +25,13 @@ public class PostRestController {
     @PostMapping("api/get-posts/{category}")
     public ResponseEntity getPostByCategory(@PathVariable(name = "category") String category) {
         if (category == null || category.equals("")) {
-            return ResponseEntity.badRequest().body("Category is empty");
+            throw new EmptyCategoryException();
         }
         if (postService.isAvailableCategory(category)) {
             List<Post> result = postService.getPostsForCategory(category);
             return ResponseEntity.ok(new Gson().toJson(result));
         }
-        return ResponseEntity.badRequest().body("Invalid category");
+        throw new UnknownCategory();
     }
 
     @PostMapping("api/init-testdata")
@@ -38,6 +40,6 @@ public class PostRestController {
         for (Post post : generatedPosts) {
             postService.addPost(post);
         }
-        return ResponseEntity.ok("OK");
+        return ResponseEntity.ok("Data is added");
     }
 }
