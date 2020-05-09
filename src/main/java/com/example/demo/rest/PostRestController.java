@@ -7,12 +7,14 @@ import com.example.demo.services.PostService;
 import com.example.demo.util.TestData;
 import com.google.gson.Gson;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 public class PostRestController {
 
