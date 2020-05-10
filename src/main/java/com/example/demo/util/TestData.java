@@ -261,7 +261,7 @@ public class TestData {
                 between(LocalDate.now().minusMonths((2L)), LocalDate.now()),
                 new Faker().name().fullName(),
                 "Crack 6x6x6 rubics cube",
-                "https://p1.piqsels.com/preview/475/1003/751/chucks-converse-sneakers-hipster.jpg",
+                "https://i.ebayimg.com/images/g/23sAAOSweW5VaXaB/s-l300.jpg",
                 "Join in in adventure of finding and learnig algorithm that solves 6x6x6 rubics cube. No cube needed.",
                 "random"
         ));
@@ -279,7 +279,7 @@ public class TestData {
                 between(LocalDate.now().minusMonths((2L)), LocalDate.now()),
                 new Faker().name().fullName(),
                 "Bear encounter",
-                "https://p1.piqsels.com/preview/475/1003/751/chucks-converse-sneakers-hipster.jpg",
+                "https://image.shutterstock.com/image-photo/cub-brown-bear-summer-forest-600w-1669879204.jpg",
                 "Looking forward to teaching multiple ways of tying a shoe.",
                 "random"
         ));
