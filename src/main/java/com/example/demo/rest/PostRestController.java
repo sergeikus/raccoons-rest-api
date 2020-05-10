@@ -44,4 +44,10 @@ public class PostRestController {
         }
         return ResponseEntity.ok("Data is added");
     }
+
+    @PostMapping("api/clear-posts")
+    public ResponseEntity clearPosts() {
+        postService.clearPosts();
+        return ResponseEntity.ok("Data is cleared");
+    }
 }

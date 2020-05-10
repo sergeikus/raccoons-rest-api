@@ -44,4 +44,8 @@ public class PostService {
         return result;
     }
 
+    public void clearPosts() {
+        posts = new ArrayList<>();
+    }
+
 }
